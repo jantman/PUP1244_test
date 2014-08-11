@@ -7,7 +7,7 @@ hosts.each do |host|
   on host, "yum -y install rubygems git ruby-devel"
   on host, "gem install bundler"
   on host, "git clone https://github.com/jantman/puppet.git"
-  on host, "cd puppet && git checkout origin/PUP-1244_puppet4 && bundle install --binstubs --path .bundle/gems/"
+  on host, "cd puppet && git checkout origin/PUP-1244_puppet4 && bundle install --path .bundle/gems/"
   on host, 'for i in /root/puppet/bin/*; do ln -s $i /usr/local/bin/; done'
 end
 
@@ -167,7 +167,9 @@ end
           puppet_apply_opts = host[:default_apply_opts].merge( puppet_apply_opts )
         end
 
-        on host, puppet_bundler('apply', file_path, puppet_apply_opts), on_options, &block
+        cmd_line = puppet_bundler('apply', file_path, puppet_apply_opts)
+        cl = cmd_line.cmd_line(host)
+        on host, "cd /root/puppet && #{cl}", on_options, &block
       end
 
       # Runs 'puppet apply' on default host, piping manifest through stdin
@@ -176,10 +178,14 @@ end
         apply_manifest_bundler_on(default, manifest, opts, &block)
       end
 
-# copied from lib/beaker/dsl/wrappers.rb and slightly modified for bundler
 module Beaker
   module DSL
     module Wrappers
+      # This is hairy and because of legacy code it will take a bit more
+      # work to disentangle all of the things that are being passed into
+      # this catchall param.
+      #
+      # @api dsl
       def puppet_bundler(*args)
         options = args.last.is_a?(Hash) ? args.pop : {}
         options['ENV'] ||= {}
