@@ -1,12 +1,12 @@
 require 'spec_helper_acceptance'
 
-describe 'PUP1244 class' do
+describe 'PUP-1244 tests' do
 
   context 'default parameters' do
     # Using puppet_apply as a helper
     it 'should work with no errors' do
       pp = <<-EOS
-      class { 'PUP1244': }
+      warning('foo')
       EOS
 
       # Run it twice and test for idempotency
@@ -14,13 +14,9 @@ describe 'PUP1244 class' do
       expect(apply_manifest(pp).exit_code).to eq(0)
     end
 
-    describe package('PUP1244') do
+    describe package('puppet') do
       it { should be_installed }
     end
 
-    describe service('PUP1244') do
-      it { should be_enabled }
-      it { should be_running }
-    end
   end
 end
