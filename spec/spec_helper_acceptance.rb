@@ -2,8 +2,9 @@ require 'beaker-rspec/spec_helper'
 require 'beaker-rspec/helpers/serverspec'
 
 hosts.each do |host|
-  # Install Puppet
-  install_puppet
+  # Install Puppet from my fork
+  on host, "gem install specific_install"
+  on host, "gem specific_install -l https://github.com/jantman/puppet.git -b 'PUP-1244_puppet4' --no-ri --no-rdoc"
 end
 
 RSpec.configure do |c|
@@ -16,7 +17,6 @@ RSpec.configure do |c|
   # Configure all nodes in nodeset
   c.before :suite do
     # Install module and dependencies
-    puppet_module_install(:source => proj_root, :module_name => 'PUP1244')
     hosts.each do |host|
       on host, puppet('module', 'install', 'puppetlabs-stdlib'), { :acceptable_exit_codes => [0,1] }
     end
