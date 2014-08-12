@@ -5,6 +5,8 @@ require 'beaker-rspec/helpers/serverspec'
 hosts.each do |host|
   # Install Puppet from my fork
   on host, "yum -y install rubygems git ruby-devel"
+  # the pgdg repo has multiple versions of some tiny packages... helpful for this testing
+  on host, "yum -y install http://yum.postgresql.org/9.3/redhat/rhel-6-x86_64/pgdg-centos93-9.3-1.noarch.rpm && yum list postgresql93-libs"
   on host, "gem install bundler"
   on host, "git clone https://github.com/jantman/puppet.git"
   on host, "cd puppet && git checkout origin/PUP-1244_puppet4 && bundle install --path .bundle/gems/"
@@ -105,12 +107,13 @@ end
         on_options[:acceptable_exit_codes] = Array(opts[:acceptable_exit_codes])
 
         puppet_apply_opts = {}
-        puppet_apply_opts[:verbose] = nil
+        puppet_apply_opts[:verbose] = nil if opts[:verbose]
         puppet_apply_opts[:parseonly] = nil if opts[:parseonly]
         puppet_apply_opts[:trace] = nil if opts[:trace]
         puppet_apply_opts[:parser] = 'future' if opts[:future_parser]
         puppet_apply_opts[:modulepath] = opts[:modulepath] if opts[:modulepath]
         puppet_apply_opts[:noop] = nil if opts[:noop]
+        puppet_apply_opts[:debug] = nil if opts[:debug]
 
         # From puppet help:
         # "... an exit code of '2' means there were changes, an exit code of
@@ -167,7 +170,7 @@ end
           puppet_apply_opts = host[:default_apply_opts].merge( puppet_apply_opts )
         end
 
-        cmd_line = puppet_bundler('apply', file_path, puppet_apply_opts)
+        cmd_line = puppet_bundler('apply', '--debug', file_path, puppet_apply_opts)
         cl = cmd_line.cmd_line(host)
         on host, "cd /root/puppet && #{cl}", on_options, &block
       end
