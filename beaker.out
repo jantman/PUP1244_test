@@ -8,7 +8,7 @@
 [00;00m[00;37m    centos-64-x64: vagrant-r10k: puppet_dir and/or puppetfile_path not set in config; not running
 [00;00m[00;37m==> centos-64-x64: Importing base box 'centos-64-x64-vbox4210-nocm'...
 [00;00m[00;37m[KProgress: 20%[KProgress: 40%[KProgress: 60%[KProgress: 80%[KProgress: 90%[K==> centos-64-x64: Matching MAC address for NAT networking...
-[00;00m[00;37m==> centos-64-x64: Setting the name of the VM: defaultyml_centos-64-x64_1407848916542_26297
+[00;00m[00;37m==> centos-64-x64: Setting the name of the VM: defaultyml_centos-64-x64_1407851150548_21858
 [00;00m[00;37m==> centos-64-x64: Clearing any previously set forwarded ports...
 [00;00m[00;37m    centos-64-x64: vagrant-r10k: puppet_dir and/or puppetfile_path not set in config; not running
 [00;00m[00;37m==> centos-64-x64: Fixed port collision for 22 => 2222. Now on port 2200.
@@ -45,33 +45,33 @@
 [00;00m[00;37mconfigure vagrant boxes (set ssh-config, switch to root user, hack etc/hosts)
 [00;00m[00;37mGive root a copy of current user's keys, on centos-64-x64
 [00;00m[00;37m
-centos-64-x64 09:09:32$  sudo su -c "cp -r .ssh /root/."  
-[00;00m[00;37mCreated ssh connection to 10.255.133.212, user: vagrant, opts: {:config=>"/tmp/centos-64-x6420140812-5547-1t30e4r", :user=>"vagrant"}
-[00;00m[00;34mAllocated a PTY on 10.255.133.212 for " sudo su -c \"cp -r .ssh /root/.\"  "
+centos-64-x64 09:46:45$  sudo su -c "cp -r .ssh /root/."  
+[00;00m[00;37mCreated ssh connection to 10.255.27.125, user: vagrant, opts: {:config=>"/tmp/centos-64-x6420140812-10023-1ahuj0n", :user=>"vagrant"}
+[00;00m[00;34mAllocated a PTY on 10.255.27.125 for " sudo su -c \"cp -r .ssh /root/.\"  "
 [00;00m[00;37m
 centos-64-x64 executed in 0.16 seconds
 [00;00m[00;37m
-centos-64-x64 09:09:33$  echo '127.0.0.1	localhost localhost.localdomain
-10.255.133.212	centos-64-x64
+centos-64-x64 09:46:46$  echo '127.0.0.1	localhost localhost.localdomain
+10.255.27.125	centos-64-x64
 ' > /etc/hosts  
-[00;00m[00;37mCreated ssh connection to 10.255.133.212, user: root, opts: {:config=>"/tmp/centos-64-x6420140812-5547-1uexu6c", :user=>"root"}
+[00;00m[00;37mCreated ssh connection to 10.255.27.125, user: root, opts: {:config=>"/tmp/centos-64-x6420140812-10023-1etheny", :user=>"root"}
 [00;00m[00;37m
 centos-64-x64 executed in 0.15 seconds
 [00;00m[00;37m
-centos-64-x64 09:09:33$  rpm -q curl  
+centos-64-x64 09:46:46$  rpm -q curl  
 [00;00m[01;30mcurl-7.19.7-35.el6.x86_64
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[00;37m
-centos-64-x64 09:09:33$  rpm -q ntpdate  
+centos-64-x64 09:46:46$  rpm -q ntpdate  
 [00;00m[01;30mntpdate-4.2.4p8-3.el6.centos.x86_64
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[00;37m
-centos-64-x64 09:09:33$  yum -y install rubygems git ruby-devel  
+centos-64-x64 09:46:46$  yum -y install rubygems git ruby-devel  
 [00;00m[01;30mLoaded plugins: fastestmirror, security
 [00;00m[01;30mDetermining fastest mirrors
-[00;00m[01;30m * base: mirror.5ninesolutions.com
+[00;00m[01;30m * base: ftpmirror.your.org
  * extras: mirror.fdcservers.net
  * updates: mirror.thelinuxfix.com
 [00;00m[01;30mSetting up Install Process
@@ -137,7 +137,7 @@ Upgrade       2 Package(s)
 [00;00m[01;30mTotal download size: 11 M
 [00;00m[01;30mDownloading Packages:
 [00;00m[01;30m--------------------------------------------------------------------------------
-[00;00m[01;30mTotal                                           4.0 MB/s |  11 MB     00:02     
+[00;00m[01;30mTotal                                           3.7 MB/s |  11 MB     00:02     
 [00;00m[01;30mRunning rpm_check_debug
 [00;00m[01;30mRunning Transaction Test
 [00;00m[01;30mTransaction Test Succeeded
@@ -187,17 +187,17 @@ Dependency Updated:
 
 [00;00m[01;30mComplete!
 [00;00m[00;37m
-centos-64-x64 executed in 33.73 seconds
+centos-64-x64 executed in 33.91 seconds
 [00;00m[00;37m
-centos-64-x64 09:10:07$  yum -y install http://yum.postgresql.org/9.3/redhat/rhel-6-x86_64/pgdg-centos93-9.3-1.noarch.rpm && yum list postgresql93-libs  
+centos-64-x64 09:47:20$  yum -y install http://yum.postgresql.org/9.3/redhat/rhel-6-x86_64/pgdg-centos93-9.3-1.noarch.rpm && yum list postgresql93-libs  
 [00;00m[01;30mLoaded plugins: fastestmirror, security
 [00;00m[01;30mLoading mirror speeds from cached hostfile
-[00;00m[01;30m * base: mirror.5ninesolutions.com
+[00;00m[01;30m * base: ftpmirror.your.org
 [00;00m[01;30m * extras: mirror.fdcservers.net
 [00;00m[01;30m * updates: mirror.thelinuxfix.com
 [00;00m[01;30mSetting up Install Process
-[00;00m[01;30mExamining /var/tmp/yum-root-O309Sa/pgdg-centos93-9.3-1.noarch.rpm: pgdg-centos93-9.3-1.noarch
-[00;00m[01;30mMarking /var/tmp/yum-root-O309Sa/pgdg-centos93-9.3-1.noarch.rpm to be installed
+[00;00m[01;30mExamining /var/tmp/yum-root-1ZZikN/pgdg-centos93-9.3-1.noarch.rpm: pgdg-centos93-9.3-1.noarch
+[00;00m[01;30mMarking /var/tmp/yum-root-1ZZikN/pgdg-centos93-9.3-1.noarch.rpm to be installed
 [00;00m[01;30mResolving Dependencies
 [00;00m[01;30m--> Running transaction check
 [00;00m[01;30m---> Package pgdg-centos93.noarch 0:9.3-1 will be installed
@@ -231,28 +231,28 @@ Installed:
 [00;00m[01;30mComplete!
 [00;00m[01;30mLoaded plugins: fastestmirror, security
 [00;00m[01;30mLoading mirror speeds from cached hostfile
-[00;00m[01;30m * base: mirror.5ninesolutions.com
+[00;00m[01;30m * base: ftpmirror.your.org
 [00;00m[01;30m * extras: mirror.fdcservers.net
 [00;00m[01;30m * updates: mirror.thelinuxfix.com
 [00;00m[01;30mAvailable Packages
 postgresql93-libs.x86_64                9.3.5-1PGDG.rhel6                 pgdg93
 [00;00m[00;37m
-centos-64-x64 executed in 11.19 seconds
+centos-64-x64 executed in 11.36 seconds
 [00;00m[00;37m
-centos-64-x64 09:10:18$  gem install bundler  
+centos-64-x64 09:47:32$  gem install bundler  
 [00;00m[01;30mSuccessfully installed bundler-1.6.5
 1 gem installed
 Installing ri documentation for bundler-1.6.5...
 Installing RDoc documentation for bundler-1.6.5...
 [00;00m[00;37m
-centos-64-x64 executed in 35.74 seconds
+centos-64-x64 executed in 33.46 seconds
 [00;00m[00;37m
-centos-64-x64 09:10:54$  git clone https://github.com/jantman/puppet.git  
+centos-64-x64 09:48:05$  git clone https://github.com/jantman/puppet.git  
 [00;00m[01;30mInitialized empty Git repository in /root/puppet/.git/
 [00;00m[00;37m
-centos-64-x64 executed in 20.14 seconds
+centos-64-x64 executed in 20.53 seconds
 [00;00m[00;37m
-centos-64-x64 09:11:14$  cd puppet && git checkout origin/PUP-1244_puppet4 && bundle install --path .bundle/gems/  
+centos-64-x64 09:48:26$  cd puppet && git checkout origin/PUP-1244_puppet4 && bundle install --path .bundle/gems/  
 [00;00m[01;30mNote: checking out 'origin/PUP-1244_puppet4'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
@@ -318,13 +318,13 @@ users on this machine.
 [00;00m[01;30mYour bundle is complete!
 [00;00m[01;30mIt was installed into ./.bundle/gems
 [00;00m[00;37m
-centos-64-x64 executed in 495.34 seconds
+centos-64-x64 executed in 514.86 seconds
 [00;00m[00;37m
-centos-64-x64 09:19:30$  for i in /root/puppet/bin/*; do ln -s $i /usr/local/bin/; done  
+centos-64-x64 09:57:01$  for i in /root/puppet/bin/*; do ln -s $i /usr/local/bin/; done  
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[00;37m
-centos-64-x64 09:19:30$ env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" puppet module  install puppetlabs-stdlib
+centos-64-x64 09:57:01$ env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" puppet module  install puppetlabs-stdlib
 [00;00m[01;30m/usr/local/bin/puppet:7:in `require'[00;00m[01;30m: [00;00m[01;30mno such file to load -- puppet/util/command_line[00;00m[01;30m ([00;00m[01;30mLoadError[00;00m[01;30m)
 [00;00m[01;30m	from /usr/local/bin/puppet:7
 [00;00m[00;37m
@@ -334,35 +334,35 @@ centos-64-x64 executed in 0.04 seconds
 PUP-1244 tests
   puppet is working
 [00;37m
-centos-64-x64 09:19:30$  uname -m  
+centos-64-x64 09:57:01$  uname -m  
 [00;00m[01;30mx86_64
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[00;37m
-centos-64-x64 09:19:30$  ls /etc/fedora-release  
+centos-64-x64 09:57:01$  ls /etc/fedora-release  
 [00;00m[01;30mls: cannot access /etc/fedora-release: No such file or directory
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[00;37mExited: 2
 [00;00m[00;37m
-centos-64-x64 09:19:30$  ls /etc/redhat-release  
+centos-64-x64 09:57:01$  ls /etc/redhat-release  
 [00;00m[01;30m/etc/redhat-release
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[00;37m
-centos-64-x64 09:19:30$  cat /etc/redhat-release  
+centos-64-x64 09:57:01$  cat /etc/redhat-release  
 [00;00m[01;30mCentOS release 6.4 (Final)
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[00;37m
-centos-64-x64 09:19:30$  mktemp -t apply_manifest.pp.XXXXXX  
-[00;00m[01;30m/tmp/apply_manifest.pp.XqjckT
+centos-64-x64 09:57:01$  mktemp -t apply_manifest.pp.XXXXXX  
+[00;00m[01;30m/tmp/apply_manifest.pp.chIGlk
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
-[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-5547-t241pp centos-64-x64:/tmp/apply_manifest.pp.XqjckT
+[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-10023-1sepy9t centos-64-x64:/tmp/apply_manifest.pp.chIGlk
 [00;00m[00;37m
-centos-64-x64 09:19:30$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply --debug --debug /tmp/apply_manifest.pp.XqjckT  
-[00;00m[01;30mDebug: Runtime environment: puppet_version=3.6.2, run_mode=user, ruby_version=1.8.7[00;00m[01;30m
+centos-64-x64 09:57:01$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply --debug --debug /tmp/apply_manifest.pp.chIGlk  
+[00;00m[01;30mDebug: Runtime environment: ruby_version=1.8.7, puppet_version=3.6.2, run_mode=user[00;00m[01;30m
 [00;00m[01;30mWarning: Scope(Class[main]): foo[00;00m[01;30m
 [00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.04 seconds[00;00m[01;30m
 [00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
@@ -392,21 +392,21 @@ centos-64-x64 09:19:30$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-r
 [00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet]/ensure: created[00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl]/ensure: created[00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]/ensure: created[00;00m[01;30m
@@ -424,29 +424,29 @@ centos-64-x64 09:19:30$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-r
 [00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]/ensure: created[00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state]/ensure: created[00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]/ensure: created[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70314623011200[00;00m[01;30m
-[00;00m[01;30mInfo: Applying configuration version '1407849569'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70314622621400[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70199384436880[00;00m[01;30m
+[00;00m[01;30mInfo: Applying configuration version '1407851808'[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70199384047020[00;00m[01;30m
 [00;00m[01;30mDebug: Storing state[00;00m[01;30m
 [00;00m[01;30mInfo: Creating state file /var/lib/puppet/state/state.yaml[00;00m[01;30m
 [00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
-[00;00m[01;30mNotice: Finished catalog run in 0.03 seconds[00;00m[01;30m
+[00;00m[01;30mNotice: Finished catalog run in 0.04 seconds[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/rrd]/ensure: created[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70314622270280[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70199383696400[00;00m[01;30m
 [00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
 [00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
 [00;00m[00;37m
-centos-64-x64 executed in 1.21 seconds
+centos-64-x64 executed in 1.30 seconds
 [00;00m[00;37m
-centos-64-x64 09:19:31$  mktemp -t apply_manifest.pp.XXXXXX  
-[00;00m[01;30m/tmp/apply_manifest.pp.djelZG
+centos-64-x64 09:57:02$  mktemp -t apply_manifest.pp.XXXXXX  
+[00;00m[01;30m/tmp/apply_manifest.pp.K5btuZ
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
-[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-5547-1bzjc45 centos-64-x64:/tmp/apply_manifest.pp.djelZG
+[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-10023-z35jsd centos-64-x64:/tmp/apply_manifest.pp.K5btuZ
 [00;00m[00;37m
-centos-64-x64 09:19:31$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply --debug --debug /tmp/apply_manifest.pp.djelZG  
-[00;00m[01;30mDebug: Runtime environment: puppet_version=3.6.2, run_mode=user, ruby_version=1.8.7[00;00m[01;30m
+centos-64-x64 09:57:03$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply --debug --debug /tmp/apply_manifest.pp.K5btuZ  
+[00;00m[01;30mDebug: Runtime environment: run_mode=user, ruby_version=1.8.7, puppet_version=3.6.2[00;00m[01;30m
 [00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
 [00;00m[01;30mWarning: Scope(Class[main]): foo[00;00m[01;30m
 [00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.04 seconds[00;00m[01;30m
@@ -480,625 +480,49 @@ centos-64-x64 09:19:31$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-r
 [00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]/mode: mode changed '0660' to '0640'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70124588316080[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70024480885760[00;00m[01;30m
 [00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
 [00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mInfo: Applying configuration version '1407849571'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70124587962140[00;00m[01;30m
-[00;00m[01;30mDebug: Storing state[00;00m[01;30m
-[00;00m[01;30mDebug: Stored state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mNotice: Finished catalog run in 0.03 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70124587611200[00;00m[01;30m
-[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
-[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
-[00;00m[00;37m
-centos-64-x64 executed in 1.19 seconds
-[00;00m[32m    should work with no errors[0m
-  install specific pg libs version RPM
-[00;37m
-centos-64-x64 09:19:33$  mktemp -t apply_manifest.pp.XXXXXX  
-[00;00m[01;30m/tmp/apply_manifest.pp.vdp66U
-[00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-5547-2nvg51 centos-64-x64:/tmp/apply_manifest.pp.vdp66U
-[00;00m[00;37m
-centos-64-x64 09:19:33$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.vdp66U  
-[00;00m[01;30mDebug: Runtime environment: ruby_version=1.8.7, puppet_version=3.6.2, run_mode=user[00;00m[01;30m
-[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.18 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
-Debug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist
-Debug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist
-Debug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist
-Debug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist
-[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
-   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')
-[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70013579426160[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mInfo: Applying configuration version '1407849572'[00;00m[01;30m
-[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
-[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64 --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y list postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64'
-[00;00m[01;30mDebug: Package[postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64](provider=yum): Ensuring => present
-Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64'
-[00;00m[01;30mNotice: /Stage[main]/Main/Package[postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64]/ensure: created
-Debug: /Stage[main]/Main/Package[postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64]: The container Class[Main] will propagate my refresh event
-[00;00m[01;30mDebug: Class[Main]: The container Stage[main] will propagate my refresh event[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70013578661120[00;00m[01;30m
+[00;00m[01;30mInfo: Applying configuration version '1407851809'[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70024480531980[00;00m[01;30m
 [00;00m[01;30mDebug: Storing state[00;00m[01;30m
 [00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
-[00;00m[01;30mNotice: Finished catalog run in 6.14 seconds[00;00m[01;30m
+[00;00m[01;30mNotice: Finished catalog run in 0.04 seconds[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70013578103920[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70024480180940[00;00m[01;30m
 [00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
 [00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
 [00;00m[00;37m
-centos-64-x64 executed in 7.49 seconds
-[00;00m[00;37m
-centos-64-x64 09:19:40$  mktemp -t apply_manifest.pp.XXXXXX  
-[00;00m[01;30m/tmp/apply_manifest.pp.wikRrf
-[00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-5547-1wkkkgu centos-64-x64:/tmp/apply_manifest.pp.wikRrf
-[00;00m[00;37m
-centos-64-x64 09:19:40$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.wikRrf  
-[00;00m[01;30mDebug: Runtime environment: ruby_version=1.8.7, run_mode=user, puppet_version=3.6.2[00;00m[01;30m
-[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.19 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
-[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
-   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
-[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet]
-Debug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet]
-Debug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet]
-Debug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet]
-Debug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet]
-Debug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state]
-Debug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet]
-Debug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl]
-Debug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state]
-Debug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet]
-Debug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state]
-Debug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state]
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70059073169700[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mInfo: Applying configuration version '1407849580'[00;00m[01;30m
-[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
-[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64 --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70059072403620[00;00m[01;30m
-[00;00m[01;30mDebug: Storing state[00;00m[01;30m
-[00;00m[01;30mDebug: Stored state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mNotice: Finished catalog run in 0.11 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70059071866720[00;00m[01;30m
-[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
-[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
-[00;00m[00;37m
-centos-64-x64 executed in 1.51 seconds
+centos-64-x64 executed in 1.25 seconds
 [00;00m[32m    should work with no errors[0m
-    Package "postgresql93-libs"
+  install specific pg libs version RPM, fully-qualified
 [00;37m
-centos-64-x64 09:19:42$  rpm -q postgresql93-libs  
-[00;00m[01;30mpostgresql93-libs-9.3.3-1PGDG.rhel6.x86_64
+centos-64-x64 09:57:04$  mktemp -t apply_manifest.pp.XXXXXX  
+[00;00m[01;30m/tmp/apply_manifest.pp.gQa9sw
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
-[00;00m[32m      should be installed[0m
-    Command "rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64"
-[00;37m
-centos-64-x64 09:19:42$  rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64  
-[00;00m[01;30mpostgresql93-libs-9.3.3-1PGDG.rhel6.x86_64
+[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-10023-qmqtwp centos-64-x64:/tmp/apply_manifest.pp.gQa9sw
 [00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[32m      should return exit status 0[0m
-  update pg libs RPM to 9.3.4
-[00;37m
-centos-64-x64 09:19:42$  mktemp -t apply_manifest.pp.XXXXXX  
-[00;00m[01;30m/tmp/apply_manifest.pp.6m8Q9N
-[00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-5547-14wntjx centos-64-x64:/tmp/apply_manifest.pp.6m8Q9N
-[00;00m[00;37m
-centos-64-x64 09:19:42$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.6m8Q9N  
-[00;00m[01;30mDebug: Runtime environment: puppet_version=3.6.2, run_mode=user, ruby_version=1.8.7[00;00m[01;30m
-[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.18 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
-[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
-   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
-[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 69969423148140[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mInfo: Applying configuration version '1407849582'[00;00m[01;30m
-[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
-[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs-9.3.4 --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y list postgresql93-libs-9.3.4'
-[00;00m[01;30mDebug: Package[postgresql93-libs-9.3.4](provider=yum): Ensuring => present
-Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.4'
-[00;00m[01;30mNotice: /Stage[main]/Main/Package[postgresql93-libs-9.3.4]/ensure: created
-Debug: /Stage[main]/Main/Package[postgresql93-libs-9.3.4]: The container Class[Main] will propagate my refresh event
-[00;00m[01;30mDebug: Class[Main]: The container Stage[main] will propagate my refresh event[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 69969422381720[00;00m[01;30m
-[00;00m[01;30mDebug: Storing state[00;00m[01;30m
-[00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
-[00;00m[01;30mNotice: Finished catalog run in 6.25 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 69969421823800[00;00m[01;30m
-[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
-[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
-[00;00m[00;37m
-centos-64-x64 executed in 7.62 seconds
-[00;00m[00;37m
-centos-64-x64 09:19:50$  mktemp -t apply_manifest.pp.XXXXXX  
-[00;00m[01;30m/tmp/apply_manifest.pp.bwcxzY
-[00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-5547-1pi5th0 centos-64-x64:/tmp/apply_manifest.pp.bwcxzY
-[00;00m[00;37m
-centos-64-x64 09:19:50$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.bwcxzY  
-[00;00m[01;30mDebug: Runtime environment: ruby_version=1.8.7, run_mode=user, puppet_version=3.6.2[00;00m[01;30m
-[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.18 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
-[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
-   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
-[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70220053136220[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mInfo: Applying configuration version '1407849589'[00;00m[01;30m
-[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
-[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs-9.3.4 --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70220052369140[00;00m[01;30m
-[00;00m[01;30mDebug: Storing state[00;00m[01;30m
-[00;00m[01;30mDebug: Stored state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mNotice: Finished catalog run in 0.11 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70220051831320[00;00m[01;30m
-[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
-[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
-[00;00m[00;37m
-centos-64-x64 executed in 1.49 seconds
-[00;00m[32m    should work with no errors[0m
-    Package "postgresql93-libs"
-[00;37m
-centos-64-x64 09:19:51$  rpm -q postgresql93-libs  
-[00;00m[01;30mpostgresql93-libs-9.3.4-1PGDG.rhel6.x86_64
-[00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[32m      should be installed[0m
-    Command "rpm -q postgresql93-libs-9.3.4-1PGDG.rhel6.x86_64"
-[00;37m
-centos-64-x64 09:19:52$  rpm -q postgresql93-libs-9.3.4-1PGDG.rhel6.x86_64  
-[00;00m[01;30mpostgresql93-libs-9.3.4-1PGDG.rhel6.x86_64
-[00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[32m      should return exit status 0[0m
-  update pg libs RPM to latest
-[00;37m
-centos-64-x64 09:19:52$  mktemp -t apply_manifest.pp.XXXXXX  
-[00;00m[01;30m/tmp/apply_manifest.pp.9Rylde
-[00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-5547-v4cits centos-64-x64:/tmp/apply_manifest.pp.9Rylde
-[00;00m[00;37m
-centos-64-x64 09:19:52$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.9Rylde  
-[00;00m[01;30mDebug: Runtime environment: run_mode=user, ruby_version=1.8.7, puppet_version=3.6.2[00;00m[01;30m
-[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.18 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
-[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
-   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
-[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
-[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
-[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70296536019400[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mInfo: Applying configuration version '1407849591'[00;00m[01;30m
-[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
-[00;00m[01;30mDebug: Executing '/usr/bin/python /root/puppet/lib/puppet/provider/package/yumhelper.py'[00;00m[01;30m
-[00;00m[01;30mDebug: /Stage[main]/Main/Package[postgresql93-libs]/ensure: postgresql93-libs "9.3.4-1PGDG.rhel6" is installed, latest is "0:9.3.5-1PGDG.rhel6"[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y list postgresql93-libs'[00;00m[01;30m
-[00;00m[01;30mDebug: Package[postgresql93-libs](provider=yum): Ensuring => latest[00;00m[01;30m
-[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs'[00;00m[01;30m
-[00;00m[01;30mNotice: /Stage[main]/Main/Package[postgresql93-libs]/ensure: ensure changed '9.3.4-1PGDG.rhel6' to '0:9.3.5-1PGDG.rhel6'
-Debug: /Stage[main]/Main/Package[postgresql93-libs]: The container Class[Main] will propagate my refresh event
-[00;00m[01;30mDebug: Class[Main]: The container Stage[main] will propagate my refresh event[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70296535252620[00;00m[01;30m
-[00;00m[01;30mDebug: Storing state[00;00m[01;30m
-[00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
-[00;00m[01;30mNotice: Finished catalog run in 6.65 seconds[00;00m[01;30m
-[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 70296534577940[00;00m[01;30m
-[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
-[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
-[00;00m[00;37m
-centos-64-x64 executed in 8.04 seconds
-[00;00m[00;37m
-centos-64-x64 09:20:00$  mktemp -t apply_manifest.pp.XXXXXX  
-[00;00m[01;30m/tmp/apply_manifest.pp.ggbpIX
-[00;00m[00;37m
-centos-64-x64 executed in 0.04 seconds
-[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-5547-4e50ts centos-64-x64:/tmp/apply_manifest.pp.ggbpIX
-[00;00m[00;37m
-centos-64-x64 09:20:00$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.ggbpIX  
+centos-64-x64 09:57:04$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.gQa9sw  
 [00;00m[01;30mDebug: Runtime environment: run_mode=user, puppet_version=3.6.2, ruby_version=1.8.7[00;00m[01;30m
 [00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
 [00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
@@ -1134,6 +558,493 @@ centos-64-x64 09:20:00$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-r
 [00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
 [00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
 [00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file rolemod does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70202666222480[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mInfo: Applying configuration version '1407851811'[00;00m[01;30m
+[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y list postgresql93-libs'
+[00;00m[01;30mDebug: Package[postgresql93-libs](provider=yum): Ensuring => 9.3.3-1PGDG
+Debug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG'
+[00;00m[01;30mError: Could not update: Execution of '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG' returned 1: Error: Nothing to do
+Wrapped exception:
+Execution of '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG' returned 1: Error: Nothing to do
+[00;00m[01;30mError: /Stage[main]/Main/Package[postgresql93-libs]/ensure: change from absent to 9.3.3-1PGDG failed: Could not update: Execution of '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG' returned 1: Error: Nothing to do[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70202665449920[00;00m[01;30m
+[00;00m[01;30mDebug: Storing state[00;00m[01;30m
+[00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
+[00;00m[01;30mNotice: Finished catalog run in 0.57 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70202664946960[00;00m[01;30m
+[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
+[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
+[00;00m[00;37m
+centos-64-x64 executed in 2.01 seconds
+[00;00m[00;37m
+centos-64-x64 09:57:06$  mktemp -t apply_manifest.pp.XXXXXX  
+[00;00m[01;30m/tmp/apply_manifest.pp.fKAFyE
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-10023-2vvguz centos-64-x64:/tmp/apply_manifest.pp.fKAFyE
+[00;00m[00;37m
+centos-64-x64 09:57:06$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.fKAFyE  
+[00;00m[01;30mDebug: Runtime environment: ruby_version=1.8.7, puppet_version=3.6.2, run_mode=user[00;00m[01;30m
+[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.19 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
+[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
+[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file rolemod does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 69913783289260[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mInfo: Applying configuration version '1407851813'[00;00m[01;30m
+[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
+[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y list postgresql93-libs'
+[00;00m[01;30mDebug: Package[postgresql93-libs](provider=yum): Ensuring => 9.3.3-1PGDG
+Debug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG'
+[00;00m[01;30mError: Could not update: Execution of '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG' returned 1: Error: Nothing to do
+Wrapped exception:
+Execution of '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG' returned 1: Error: Nothing to do
+Error: /Stage[main]/Main/Package[postgresql93-libs]/ensure: change from absent to 9.3.3-1PGDG failed: Could not update: Execution of '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.3-1PGDG' returned 1: Error: Nothing to do
+[00;00m[01;30mDebug: Finishing transaction 69913782516060[00;00m[01;30m
+[00;00m[01;30mDebug: Storing state[00;00m[01;30m
+[00;00m[01;30mDebug: Stored state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mNotice: Finished catalog run in 0.56 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 69913782012700[00;00m[01;30m
+[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
+[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
+[00;00m[00;37m
+centos-64-x64 executed in 2.01 seconds
+[00;00m[32m    should work with no errors[0m
+    Package "postgresql93-libs"
+[00;37m
+centos-64-x64 09:57:08$  rpm -q postgresql93-libs  
+[00;00m[01;30mpackage postgresql93-libs is not installed
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[00;37mExited: 1
+[00;00m[31m      should be installed (FAILED - 1)[0m
+    Command "rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64"
+[00;37m
+centos-64-x64 09:57:08$  rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64  
+[00;00m[01;30mpackage postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64 is not installed
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[00;37mExited: 1
+[00;00m[31m      should return exit status 0 (FAILED - 2)[0m
+  update pg libs RPM to 9.3.4
+[00;37m
+centos-64-x64 09:57:08$  mktemp -t apply_manifest.pp.XXXXXX  
+[00;00m[01;30m/tmp/apply_manifest.pp.kuOiKg
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-10023-11hzfnj centos-64-x64:/tmp/apply_manifest.pp.kuOiKg
+[00;00m[00;37m
+centos-64-x64 09:57:08$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.kuOiKg  
+[00;00m[01;30mDebug: Runtime environment: puppet_version=3.6.2, run_mode=user, ruby_version=1.8.7[00;00m[01;30m
+[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.19 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
+[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
+[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file rolemod does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 69974550584000[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mInfo: Applying configuration version '1407851815'[00;00m[01;30m
+[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
+[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y list postgresql93-libs'
+[00;00m[01;30mDebug: Package[postgresql93-libs](provider=yum): Ensuring => 9.3.4
+Debug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.4'
+[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+[00;00m[01;30mDebug: Finishing transaction 69974549810760
+Debug: Storing state
+[00;00m[01;30mError: Could not update: Failed to update to version 9.3.4, got version 9.3.4-1PGDG.rhel6 instead
+Wrapped exception:
+Failed to update to version 9.3.4, got version 9.3.4-1PGDG.rhel6 instead
+Error: /Stage[main]/Main/Package[postgresql93-libs]/ensure: change from absent to 9.3.4 failed: Could not update: Failed to update to version 9.3.4, got version 9.3.4-1PGDG.rhel6 instead
+[00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
+[00;00m[01;30mNotice: Finished catalog run in 6.21 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 69974549302160[00;00m[01;30m
+[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
+[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
+[00;00m[00;37m
+centos-64-x64 executed in 7.77 seconds
+[00;00m[00;37m
+centos-64-x64 09:57:16$  mktemp -t apply_manifest.pp.XXXXXX  
+[00;00m[01;30m/tmp/apply_manifest.pp.zegf46
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-10023-1m2gel8 centos-64-x64:/tmp/apply_manifest.pp.zegf46
+[00;00m[00;37m
+centos-64-x64 09:57:16$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.zegf46  
+[00;00m[01;30mDebug: Runtime environment: puppet_version=3.6.2, run_mode=user, ruby_version=1.8.7[00;00m[01;30m
+[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.19 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
+[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
+[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file rolemod does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70150708130500[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mInfo: Applying configuration version '1407851823'[00;00m[01;30m
+[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y list postgresql93-libs'[00;00m[01;30m
+[00;00m[01;30mDebug: Package[postgresql93-libs](provider=yum): Ensuring => 9.3.4
+Debug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs-9.3.4'
+[00;00m[01;30mDebug: Executing '/bin/rpm -q postgresql93-libs --nosignature --nodigest --qf %{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n'
+[00;00m[01;30mDebug: Finishing transaction 70150707357520
+Debug: Storing state
+[00;00m[01;30mError: Could not update: Failed to update to version 9.3.4, got version 9.3.4-1PGDG.rhel6 instead
+Wrapped exception:
+Failed to update to version 9.3.4, got version 9.3.4-1PGDG.rhel6 instead
+Error: /Stage[main]/Main/Package[postgresql93-libs]/ensure: change from 9.3.4-1PGDG.rhel6 to 9.3.4 failed: Could not update: Failed to update to version 9.3.4, got version 9.3.4-1PGDG.rhel6 instead
+[00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
+[00;00m[01;30mNotice: Finished catalog run in 0.56 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70150706853840[00;00m[01;30m
+[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
+[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
+[00;00m[00;37m
+centos-64-x64 executed in 1.98 seconds
+[00;00m[32m    should work with no errors[0m
+    Package "postgresql93-libs"
+[00;37m
+centos-64-x64 09:57:18$  rpm -q postgresql93-libs  
+[00;00m[01;30mpostgresql93-libs-9.3.4-1PGDG.rhel6.x86_64
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[32m      should be installed[0m
+    Command "rpm -q postgresql93-libs-9.3.4-1PGDG.rhel6.x86_64"
+[00;37m
+centos-64-x64 09:57:18$  rpm -q postgresql93-libs-9.3.4-1PGDG.rhel6.x86_64  
+[00;00m[01;30mpostgresql93-libs-9.3.4-1PGDG.rhel6.x86_64
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[32m      should return exit status 0[0m
+  update pg libs RPM to latest
+[00;37m
+centos-64-x64 09:57:18$  mktemp -t apply_manifest.pp.XXXXXX  
+[00;00m[01;30m/tmp/apply_manifest.pp.ksWSPM
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-10023-11i2hlx centos-64-x64:/tmp/apply_manifest.pp.ksWSPM
+[00;00m[00;37m
+centos-64-x64 09:57:18$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.ksWSPM  
+[00;00m[01;30mDebug: Runtime environment: puppet_version=3.6.2, ruby_version=1.8.7, run_mode=user[00;00m[01;30m
+[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.19 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
+[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
+[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
 [00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[00;00m[01;30m
 [00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
 [00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
@@ -1160,57 +1071,195 @@ centos-64-x64 09:20:00$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-r
 [00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
-[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70105005383960[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mInfo: Applying configuration version '1407851825'[00;00m[01;30m
+[00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/usr/bin/python /root/puppet/lib/puppet/provider/package/yumhelper.py'[00;00m[01;30m
+[00;00m[01;30mDebug: /Stage[main]/Main/Package[postgresql93-libs]/ensure: postgresql93-libs "9.3.4-1PGDG.rhel6" is installed, latest is "0:9.3.5-1PGDG.rhel6"[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/usr/bin/yum -d 0 -e 0 -y list postgresql93-libs'[00;00m[01;30m
+[00;00m[01;30mDebug: Package[postgresql93-libs](provider=yum): Ensuring => latest
+Debug: Executing '/usr/bin/yum -d 0 -e 0 -y install postgresql93-libs'
+[00;00m[01;30mNotice: /Stage[main]/Main/Package[postgresql93-libs]/ensure: ensure changed '9.3.4-1PGDG.rhel6' to '0:9.3.5-1PGDG.rhel6'
+Debug: /Stage[main]/Main/Package[postgresql93-libs]: The container Class[Main] will propagate my refresh event
+[00;00m[01;30mDebug: Class[Main]: The container Stage[main] will propagate my refresh event[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70105004618420[00;00m[01;30m
+[00;00m[01;30mDebug: Storing state[00;00m[01;30m
+[00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
+[00;00m[01;30mNotice: Finished catalog run in 6.46 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70105003946060[00;00m[01;30m
+[00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
+[00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
+[00;00m[00;37m
+centos-64-x64 executed in 8.00 seconds
+[00;00m[00;37m
+centos-64-x64 09:57:26$  mktemp -t apply_manifest.pp.XXXXXX  
+[00;00m[01;30m/tmp/apply_manifest.pp.lYj4Fj
+[00;00m[00;37m
+centos-64-x64 executed in 0.04 seconds
+[00;00m[00;37mlocalhost $ scp /tmp/beaker20140812-10023-1aybu0n centos-64-x64:/tmp/apply_manifest.pp.lYj4Fj
+[00;00m[00;37m
+centos-64-x64 09:57:27$  cd /root/puppet && env PATH="/usr/bin:/opt/puppet-git-repos/hiera/bin:${PATH}" RUBYLIB="/opt/puppet-git-repos/hiera/lib:/opt/puppet-git-repos/hiera-puppet/lib:${RUBYLIB}" bundle exec puppet apply  --debug /tmp/apply_manifest.pp.lYj4Fj  
+[00;00m[01;30mDebug: Runtime environment: ruby_version=1.8.7, run_mode=user, puppet_version=3.6.2[00;00m[01;30m
+[00;00m[01;30mInfo: Loading external facts from /var/lib/puppet/facts.d[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm -ql rpm'[00;00m[01;30m
+[00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
+[00;00m[01;30mNotice: Compiled catalog for centos-64-x64.ddtc.cmgdigital.com in environment production in 0.19 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUrpmi: file urpmi does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderNim: file /usr/sbin/nimclient does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortage: file /usr/bin/emerge does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSun: file /usr/bin/pkginfo does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFink: file /sw/bin/fink does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkgin: file pkgin does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptrpm: file apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderDpkg: file /usr/bin/dpkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPorts: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderFreebsd: file /usr/sbin/pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPacman: file /usr/bin/pacman does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderHpux: file /usr/sbin/swremove does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpkg: file opkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAptitude: file /usr/bin/aptitude does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderAix: file /usr/sbin/installp does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderOpenbsd: file pkg_info does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPortupgrade: file /usr/local/sbin/portversion does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderApt: file /usr/bin/apt-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderZypper: file /usr/bin/zypper does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderPkg: file /usr/bin/pkg does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderSunfreeware: file pkg-get does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderUp2date: file /usr/sbin/up2date-nox does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Package::ProviderRug: file /usr/bin/rug does not exist[00;00m[01;30m
+[00;00m[01;30mWarning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+   (at /root/puppet/lib/puppet/type/package.rb:430:in `default')[00;00m[01;30m
+[00;00m[01;30mDebug: Creating default schedules[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'selinux' for feature 'selinux'[00;00m[01;30m
+[00;00m[01;30mDebug: Failed to load library 'shadow' for feature 'libshadow'[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dsimport does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderPw: file pw does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderLdap: true value when expecting false[00;00m[01;30m
+[00;00m[01;30mDebug: Puppet::Type::Group::ProviderDirectoryservice: file /usr/bin/dscl does not exist[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'requestdir': 'File[/etc/puppet/ssl/certificate_requests]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certificate_requests"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatedir': 'File[/etc/puppet/ssl/private]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'certdir': 'File[/etc/puppet/ssl/certs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/certs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientyamldir': 'File[/var/lib/puppet/client_yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'confdir': 'File[/etc/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/etc/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'publickeydir': 'File[/etc/puppet/ssl/public_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/etc/puppet/ssl/public_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'plugindest': 'File[/var/lib/puppet/lib]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/lib"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunreport': 'File[/var/lib/puppet/state/last_run_report.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"640", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_report.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'clientbucketdir': 'File[/var/lib/puppet/clientbucket]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/clientbucket"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'privatekeydir': 'File[/etc/puppet/ssl/private_keys]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/etc/puppet/ssl/private_keys"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'pluginfactdest': 'File[/var/lib/puppet/facts.d]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/facts.d"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'graphdir': 'File[/var/lib/puppet/state/graphs]{:loglevel=>:debug, :links=>:follow, :backup=>false, :ensure=>:directory, :path=>"/var/lib/puppet/state/graphs"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'rundir': 'File[/var/lib/puppet/run]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"755", :ensure=>:directory, :path=>"/var/lib/puppet/run"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statefile': 'File[/var/lib/puppet/state/state.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"660", :ensure=>:file, :path=>"/var/lib/puppet/state/state.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'logdir': 'File[/var/lib/puppet/log]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/log"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'ssldir': 'File[/etc/puppet/ssl]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"771", :ensure=>:directory, :path=>"/etc/puppet/ssl"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'client_datadir': 'File[/var/lib/puppet/client_data]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/client_data"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'lastrunfile': 'File[/var/lib/puppet/state/last_run_summary.yaml]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"644", :ensure=>:file, :path=>"/var/lib/puppet/state/last_run_summary.yaml"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'vardir': 'File[/var/lib/puppet]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :ensure=>:directory, :path=>"/var/lib/puppet"}'[00;00m[01;30m
+[00;00m[01;30mDebug: Using settings: adding file resource 'statedir': 'File[/var/lib/puppet/state]{:loglevel=>:debug, :links=>:follow, :backup=>false, :mode=>"1755", :ensure=>:directory, :path=>"/var/lib/puppet/state"}'[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/run]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl]: Autorequiring File[/etc/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/facts.d]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/log]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
 [00;00m[01;30mDebug: /File[/etc/puppet/ssl/certs]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 69830500106480[00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/public_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private_keys]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/private]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: /File[/etc/puppet/ssl/certificate_requests]: Autorequiring File[/etc/puppet/ssl][00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70146164904480[00;00m[01;30m
 [00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
 [00;00m[01;30mDebug: Loaded state in 0.00 seconds[00;00m[01;30m
-[00;00m[01;30mInfo: Applying configuration version '1407849599'[00;00m[01;30m
+[00;00m[01;30mInfo: Applying configuration version '1407851833'[00;00m[01;30m
 [00;00m[01;30mDebug: Prefetching yum resources for package[00;00m[01;30m
 [00;00m[01;30mDebug: Executing '/bin/rpm --version'[00;00m[01;30m
 [00;00m[01;30mDebug: Executing '/bin/rpm -qa --nosignature --nodigest --qf '%{NAME} %|EPOCH?{%{EPOCH}}:{0}| %{VERSION} %{RELEASE} %{ARCH}\n''
 [00;00m[01;30mDebug: Executing '/usr/bin/python /root/puppet/lib/puppet/provider/package/yumhelper.py'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 69830499338600[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70146164138400[00;00m[01;30m
 [00;00m[01;30mDebug: Storing state[00;00m[01;30m
-[00;00m[01;30mDebug: Stored state in 0.01 seconds[00;00m[01;30m
-[00;00m[01;30mNotice: Finished catalog run in 0.44 seconds[00;00m[01;30m
+[00;00m[01;30mDebug: Stored state in 0.00 seconds[00;00m[01;30m
+[00;00m[01;30mNotice: Finished catalog run in 0.39 seconds[00;00m[01;30m
 [00;00m[01;30mDebug: Using settings: adding file resource 'rrddir': 'File[/var/lib/puppet/rrd]{:loglevel=>:debug, :links=>:follow, :backup=>false, :owner=>"root", :mode=>"750", :ensure=>:directory, :path=>"/var/lib/puppet/rrd"}'[00;00m[01;30m
-[00;00m[01;30mDebug: Finishing transaction 69830498686820[00;00m[01;30m
+[00;00m[01;30mDebug: Finishing transaction 70146163488840[00;00m[01;30m
 [00;00m[01;30mDebug: Received report to process from centos-64-x64.ddtc.cmgdigital.com[00;00m[01;30m
 [00;00m[01;30mDebug: Processing report from centos-64-x64.ddtc.cmgdigital.com with processor Puppet::Reports::Store[00;00m[01;30m
 [00;00m[00;37m
-centos-64-x64 executed in 1.92 seconds
+centos-64-x64 executed in 1.83 seconds
 [00;00m[32m    should work with no errors[0m
     Package "postgresql93-libs"
 [00;37m
-centos-64-x64 09:20:02$  rpm -q postgresql93-libs  
+centos-64-x64 09:57:28$  rpm -q postgresql93-libs  
 [00;00m[01;30mpostgresql93-libs-9.3.5-1PGDG.rhel6.x86_64
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[32m      should be installed[0m
     Command "rpm -q postgresql93-libs-9.3.5-1PGDG.rhel6.x86_64"
 [00;37m
-centos-64-x64 09:20:02$  rpm -q postgresql93-libs-9.3.5-1PGDG.rhel6.x86_64  
+centos-64-x64 09:57:28$  rpm -q postgresql93-libs-9.3.5-1PGDG.rhel6.x86_64  
 [00;00m[01;30mpostgresql93-libs-9.3.5-1PGDG.rhel6.x86_64
 [00;00m[00;37m
 centos-64-x64 executed in 0.04 seconds
 [00;00m[32m      should return exit status 0[0m
 
-Finished in 32.2 seconds
-[32m10 examples, 0 failures[0m
+Failures:
+
+  1) PUP-1244 tests install specific pg libs version RPM, fully-qualified Package "postgresql93-libs" should be installed
+     [31mOn host ``[0m
+     [31mFailure/Error:[0m [31mit { should be_installed }[0m
+       [31mrpm -q postgresql93-libs[0m
+       [31mpackage postgresql93-libs is not installed
+[0m
+       [31mexpected Package "postgresql93-libs" to be installed[0m
+[36m     # ./spec/acceptance/class_spec.rb:29:in `block (4 levels) in <top (required)>'[0m
+
+  2) PUP-1244 tests install specific pg libs version RPM, fully-qualified Command "rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64" should return exit status 0
+     [31mOn host ``[0m
+     [31mFailure/Error:[0m [31mit { should return_exit_status 0 }[0m
+       [31mrpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64[0m
+       [31mpackage postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64 is not installed
+[0m
+       [31mexpected Command "rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64" to return exit status 0[0m
+[36m     # ./spec/acceptance/class_spec.rb:32:in `block (4 levels) in <top (required)>'[0m
+
+Finished in 27.84 seconds
+[31m10 examples, 2 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/acceptance/class_spec.rb:29[0m [36m# PUP-1244 tests install specific pg libs version RPM, fully-qualified Package "postgresql93-libs" should be installed[0m
+[31mrspec ./spec/acceptance/class_spec.rb:32[0m [36m# PUP-1244 tests install specific pg libs version RPM, fully-qualified Command "rpm -q postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64" should return exit status 0[0m
+/home/jantman/.rvm/rubies/ruby-1.9.3-p545/bin/ruby -S rspec spec/acceptance --color failed

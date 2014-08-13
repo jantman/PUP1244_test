@@ -15,10 +15,10 @@ describe 'PUP-1244 tests' do
     end
   end
 
-  context 'install specific pg libs version RPM' do
+  context 'install specific pg libs version RPM, fully-qualified' do
     it 'should work with no errors' do
       pp = <<-EOS
-      package { 'postgresql93-libs-9.3.3-1PGDG.rhel6.x86_64': ensure => present, }
+      package { 'postgresql93-libs': ensure => '9.3.3-1PGDG', }
       EOS
 
       # Run it twice and test for idempotency
@@ -36,7 +36,7 @@ describe 'PUP-1244 tests' do
   describe 'update pg libs RPM to 9.3.4' do
     it 'should work with no errors' do
       pp = <<-EOS
-      package { 'postgresql93-libs-9.3.4': ensure => present, }
+      package { 'postgresql93-libs': ensure => '9.3.4', }
       EOS
 
       # Run it twice and test for idempotency
